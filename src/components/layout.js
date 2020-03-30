@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
-import { StaticQuery, graphql } from "gatsby";
-import { HelmetDatoCms } from "gatsby-source-datocms";
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+import { HelmetDatoCms } from '@gatsbyjs/gatsby-source-datocms'
 
-import "../styles/index.sass";
+import '../styles/index.sass'
 
 const TemplateWrapper = ({ children }) => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false)
   return (
     <StaticQuery
       query={graphql`
@@ -42,7 +42,7 @@ const TemplateWrapper = ({ children }) => {
         }
       `}
       render={data => (
-        <div className={`container ${showMenu ? "is-open" : ""}`}>
+        <div className={`container ${showMenu ? 'is-open' : ''}`}>
           <HelmetDatoCms
             favicon={data.datoCmsSite.faviconMetaTags}
             seo={data.datoCmsHome.seoMetaTags}
@@ -75,7 +75,7 @@ const TemplateWrapper = ({ children }) => {
                     target="blank"
                     className={`social social--${profile.profileType.toLowerCase()}`}
                   >
-                    {" "}
+                    {' '}
                   </a>
                 ))}
               </p>
@@ -91,8 +91,8 @@ const TemplateWrapper = ({ children }) => {
                   <a
                     href="#"
                     onClick={e => {
-                      e.preventDefault();
-                      setShowMenu(!showMenu);
+                      e.preventDefault()
+                      setShowMenu(!showMenu)
                     }}
                   />
                 </div>
@@ -106,11 +106,11 @@ const TemplateWrapper = ({ children }) => {
         </div>
       )}
     />
-  );
-};
+  )
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.object
-};
+}
 
-export default TemplateWrapper;
+export default TemplateWrapper
