@@ -12,7 +12,7 @@ You can [sign up for a free account](https://dashboard.datocms.com/signup) and t
 
 [![Deploy with DatoCMS](https://dashboard.datocms.com/deploy/button.svg)](https://dashboard.datocms.com/projects/new-from-template/static-website/gatsby-portfolio)
 
-## Repo usage
+## Usage
 
 First, install the dependencies of this project:
 
